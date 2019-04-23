@@ -40,7 +40,11 @@
                 right: 10px;
                 top: 18px;
             }
-
+            
+            .content ul {
+                text-align: left;
+            }
+            
             .content {
                 text-align: center;
             }

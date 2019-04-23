@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class TestController extends Controller
+class ReportsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,28 +13,17 @@ class TestController extends Controller
      */
     public function index()
     {
-        return 'You have reached the test page';
+        return view('report.index');
     }
-
-    /**
-     * A test method
-     *
-     * @return string
-     */
-    public function test()
-    {
-        return '<h3><center>There is no test method in the TestController</center></h3>';
-    }
-
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function get()
+    public function create()
     {
-         return 'Why am I not getting this response? <br> Because this is a GET Request and we are not posting anything. <br>Don\'t worry, I changed it for you.';
+        return view('report.create');
     }
 
     /**
@@ -45,7 +34,7 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //store and redirect
     }
 
     /**
@@ -56,7 +45,8 @@ class TestController extends Controller
      */
     public function show($id)
     {
-        //
+        // get something with an ID
+        return view('report.show'/*, place id here*/);
     }
 
     /**
@@ -67,7 +57,8 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        //
+        // get something with an ID
+        return view('report.edit'/*, place id here*/);
     }
 
     /**
@@ -79,7 +70,7 @@ class TestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       // update and redirect
     }
 
     /**
@@ -90,6 +81,6 @@ class TestController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Delete and redirect
     }
 }
